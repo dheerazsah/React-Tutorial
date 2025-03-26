@@ -4,31 +4,43 @@
       "id": "av001",
       "title": "Optimizing CRM for Better User Experience",
       "body": "At Avinto, we recently revamped our CRM system to improve efficiency and usability. The new design enhances navigation, integrates automation, and ensures a seamless user experience. Our goal was to reduce friction and improve engagement for both our internal team and clients.",
-      "author": "Animesh"
+      "author": "Dhiraj",
+      "date": "March 20, 2025"
     },
     {
       "id": "av002",
       "title": "Developing a Role-Based Hiring System",
       "body": "Avinto introduced a unique hiring system where applicants can propose their own roles based on their expertise. This system allows us to attract talented individuals who might not fit into traditional job descriptions but bring great value to the company.",
-      "author": "Rahul"
+      "author": "Animesh",
+      "date": "March 18, 2025"
     },
     {
       "id": "av003",
       "title": "Enhancing Security with a New Login System",
       "body": "Security is a top priority at Avinto. We recently implemented a multi-factor authentication (MFA) system, adding an extra layer of security to our login process. This helps protect user data and ensures compliance with security best practices.",
-      "author": "Dhiraj"
+      "author": "Sajjan",
+      "date": "March 15, 2025"
     },
     {
       "id": "av004",
       "title": "Automated Reporting for Business Insights",
       "body": "We developed an automated reporting tool that generates real-time insights for our clients. With dynamic dashboards and AI-driven analysis, Avinto’s reporting system helps businesses make data-driven decisions faster and more accurately.",
-      "author": "Rahul"
+      "author": "Animesh",
+      "date": "March 12, 2025"
     },
     {
       "id": "av005",
       "title": "Scaling Our SaaS Infrastructure",
       "body": "Avinto is expanding its SaaS solutions by improving server scalability and optimizing database performance. Our latest project focused on reducing downtime and improving system reliability to handle a growing user base efficiently.",
-      "author": "Sajjan"
+      "author": "Sajjan",
+      "date": "March 10, 2025"
+    },
+    {
+      "id": "1e40",
+      "title": "Lorem 2",
+      "body": "Lorem",
+      "author": "mario",
+      "date": "March 26, 2025"
     }
   ]
 }

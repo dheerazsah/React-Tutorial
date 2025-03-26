@@ -5,12 +5,16 @@ const Create = () => {
     const [ title, setTitle ] = useState('');
     const [ body, setBody ] = useState('');
     const [author, setAuthor] = useState('mario');
+    const [date, setDate] = useState(() => {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date().toLocaleDateString('en-US', options);
+    });
     const [isPending, setIsPending] = useState(false);
     const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const blog = { title, body, author };
+        const blog = { title, body, author, date };
 
         setIsPending(true);
 
@@ -50,6 +54,12 @@ const Create = () => {
                     <option value="mario">Mario</option>
                     <option value="yoshi">Yoshi</option>
                 </select>
+                <label>Blog date:</label>
+                <input 
+                    type="text"
+                    value={date}
+                    readOnly
+                />
                 { !isPending && <button>Add Blog</button> }
                 { isPending && <button disabled>Adding Blog...</button> }
             </form>
