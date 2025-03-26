@@ -17,36 +17,6 @@
       "title": "Test Blog",
       "body": "Lorem Ipsum",
       "author": "mario"
-    },
-    {
-      "id": "af19",
-      "title": "Hello 2",
-      "body": "Hello hello",
-      "author": "yoshi"
-    },
-    {
-      "id": "f389",
-      "title": "Hello 2",
-      "body": "Hello hello",
-      "author": "yoshi"
-    },
-    {
-      "id": "34a8",
-      "title": "Hello 2",
-      "body": "Hello hello",
-      "author": "yoshi"
-    },
-    {
-      "id": "72b3",
-      "title": "ggg",
-      "body": "gggg",
-      "author": "mario"
-    },
-    {
-      "id": "68ca",
-      "title": "Helllooooooooooooooooooooo",
-      "body": "Helooooooooooooooooooooooooooooooooooooooooooooooooo\nHeloooooooooooooooooooooo",
-      "author": "mario"
     }
   ]
 }
