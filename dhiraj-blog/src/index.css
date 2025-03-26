@@ -105,3 +105,32 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+.not-found {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.not-found h2 {
+  font-size: 2rem;
+  color: #1169c4;
+}
+
+.not-found p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.not-found a {
+  text-decoration: none;
+  color: white;
+  background-color: #1169c4;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.not-found a:hover {
+  background-color: #0056b3;
+}
