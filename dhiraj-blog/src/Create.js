@@ -8,7 +8,7 @@ const Create = () => {
     const [authors, setAuthors] = useState(() => {
         // Get authors from localStorage if they exist
         const storedAuthors = localStorage.getItem('authors');
-        return storedAuthors ? JSON.parse(storedAuthors) : ["Mario", "Yoshi"];
+        return storedAuthors ? JSON.parse(storedAuthors) : ["Dhiraj", "Anmiesh", "Sajjan"];
     });
 
     const [author, setAuthor] = useState(authors[0]); 
