@@ -4,7 +4,15 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 const Create = () => {
     const [ title, setTitle ] = useState('');
     const [ body, setBody ] = useState('');
-    const [author, setAuthor] = useState('mario');
+    //const [authors, setAuthors] = useState(["Mario", "Yoshi"]); // Default authors
+    const [authors, setAuthors] = useState(() => {
+        // Get authors from localStorage if they exist
+        const storedAuthors = localStorage.getItem('authors');
+        return storedAuthors ? JSON.parse(storedAuthors) : ["Mario", "Yoshi"];
+    });
+
+    const [author, setAuthor] = useState(authors[0]); 
+    const [newAuthor, setNewAuthor] = useState("");
     const [date, setDate] = useState(() => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         return new Date().toLocaleDateString('en-US', options);
@@ -27,8 +35,23 @@ const Create = () => {
             setIsPending(false);
             //history.go(-1);
             history.push('/');
-        })
-    }
+        });
+    };
+
+    
+
+    const handleAddAuthor = () => {
+        if (newAuthor && !authors.includes(newAuthor)) {
+            const updatedAuthors = [...authors, newAuthor];
+            setAuthors(updatedAuthors);
+            setAuthor(newAuthor); // Automatically select the new author
+            setNewAuthor(''); // Clear input field
+
+            // Save the updated authors list to localStorage
+            localStorage.setItem('authors', JSON.stringify(updatedAuthors));
+        }
+    };
+
     return (
         <div className="create">
             <h2>Add a New Blog</h2>
@@ -46,14 +69,38 @@ const Create = () => {
                 value={ body }
                 onChange={(e) => setBody(e.target.value)}
                 ></textarea>
+
                 <label>Blog author:</label>
-                <select
-                    value={ author }
-                    onChange={(e) => setAuthor(e.target.value)}
-                >
-                    <option value="mario">Mario</option>
-                    <option value="yoshi">Yoshi</option>
-                </select>
+                <div className="author-dropdown">
+                    <select 
+                        value={author} 
+                        onChange={(e) => {
+                            if (e.target.value === 'add-new') {
+                                setAuthor('');
+                            } else {
+                                setAuthor(e.target.value);
+                            }
+                        }}
+                    >
+                        {authors.map((auth, index) => (
+                            <option key={index} value={auth}>{auth}</option>
+                        ))}
+                        <option value="add-new">+ Add New Author</option>
+                    </select>
+
+                    {author === '' && (
+                        <div className="new-author-input">
+                            <input
+                                type="text"
+                                value={newAuthor}
+                                onChange={(e) => setNewAuthor(e.target.value)}
+                                placeholder="Enter new author"
+                            />
+                            <button type="button" onClick={handleAddAuthor}>Add Author</button>
+                        </div>
+                    )}
+                </div>
+
                 <label>Blog date:</label>
                 <input 
                     type="text"
